@@ -2,30 +2,150 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zentrix</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#000,#0a1a2f);
+      color: #fff;
+      text-align: center;
+    }
+
+    header {
+      padding: 80px 20px;
+      animation: fadeIn 1.5s ease;
+    }
+
+    img.logo {
+      width: 140px;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      color: #bbb;
+    }
+
+    .btn {
+      padding: 12px 22px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp { background: #25D366; }
+    .email { background: #222; }
+
+    section {
+      padding: 50px 20px;
+    }
+
+    .services {
+      max-width: 600px;
+      margin: auto;
+      text-align: left;
+    }
+
+    .services p {
+      margin: 12px 0;
+    }
+
+    footer {
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* WhatsApp flotante */
+    .float {
+      position: fixed;
+      width: 65px;
+      height: 65px;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(-20px);} 
+      to {opacity:1; transform: translateY(0);} 
+    }
+
+    @keyframes float {
+      0%,100% {transform: translateY(0);} 
+      50% {transform: translateY(-10px);} 
+    }
+  </style>
 </head>
-<body style="background:black;color:white;font-family:Arial;text-align:center;padding:40px;">
+<body>
 
-  <h1>ZENTRIX</h1>
-  <p style="color:gray;">Sistemas contra incendios, electricidad y mantenimiento profesional</p>
+  <header>
+    <img src="60375339-62E2-4845-A9EE-299D5E7E3686.png" class="logo">
+    <h1>ZENTRIX</h1>
+    <p>Sistemas contra incendios, electricidad y mantenimiento profesional</p>
 
-  <br>
+    <a href="https://wa.me/18094418094?text=Hola%20quiero%20una%20cotizaci%C3%B3n">
+      <button class="btn whatsapp">WhatsApp</button>
+    </a>
 
-  <a href="https://wa.me/18094418094">
-    <button>WhatsApp</button>
-  </a>
+    <a href="mailto:Mischael110@gmail.com">
+      <button class="btn email">Correo</button>
+    </a>
+  </header>
 
-  <a href="mailto:Mischael110@gmail.com">
-    <button>Correo</button>
-  </a>
+  <section>
+    <h2>Servicios</h2>
+    <div class="services">
+      <p>• Sistemas de alarmas contra incendios, sirenas y detección</p>
+      <p>• Diseño eléctrico y sistemas de potencia</p>
+      <p>• Mantenimiento eléctrico</p>
+    </div>
+  </section>
 
-  <br><br><br>
+  <section>
+    <h2>Trabajos Profesionales</h2>
+    <p>Instalaciones seguras, certificadas y con altos estándares de calidad.</p>
+  </section>
 
-  <h2>Servicios</h2>
+  <section>
+    <h2>Contacto rápido</h2>
+    <p>Disponible 24/7 para emergencias y servicios técnicos.</p>
+  </section>
 
-  <p>• Sistemas de alarmas contra incendios, sirenas y detección</p>
-  <p>• Diseño eléctrico y sistemas de potencia</p>
-  <p>• Mantenimiento eléctrico</p>
+  <footer>
+    © 2026 Zentrix - Todos los derechos reservados
+  </footer>
+
+  <!-- Botón flotante -->
+  <a href="https://wa.me/18094418094?text=Hola%20necesito%20informaci%C3%B3n" class="float">💬</a>
+
+  <!-- Chat IA (configurable luego) -->
+  <script>
+    console.log("Chat listo para integrar");
+  </script>
 
 </body>
 </html>
