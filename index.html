@@ -1,162 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zentrix</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zentrix</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#000,#0a1a2f);
-      color: #fff;
-      text-align: center;
-    }
+<style>
+body {margin:0;font-family:Arial;background:linear-gradient(135deg,#000,#0a1a2f);color:#fff;}
 
-    header {
-      padding: 80px 20px;
-      animation: fadeIn 1.5s ease;
-    }
+/* NAVBAR */
+.navbar {display:flex;justify-content:space-between;align-items:center;padding:15px 20px;background:#000;position:fixed;width:100%;top:0;z-index:1000;}
+.menu {font-size:28px;cursor:pointer;}
 
-    img.logo {
-      width: 140px;
-      margin-bottom: 20px;
-      animation: float 3s ease-in-out infinite;
-    }
+/* SIDEMENU */
+.sidemenu {position:fixed;top:0;right:-250px;width:250px;height:100%;background:#111;padding:20px;transition:0.3s;}
+.sidemenu a {display:block;color:white;margin:15px 0;text-decoration:none;}
 
-    h1 { font-size: 48px; margin-bottom: 10px; }
-    p { color: #bbb; }
+header {padding:100px 20px 60px;text-align:center;}
 
-    .btn {
-      padding: 12px 22px;
-      margin: 10px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: 0.3s;
-    }
+.logo {width:120px;margin-bottom:15px;}
 
-    .btn:hover { transform: scale(1.05); }
-    .whatsapp { background: #25D366; }
-    .email { background: #222; }
+h1 {font-size:42px;margin:10px 0;}
+p {color:#bbb;}
 
-    section { padding: 50px 20px; }
+.btn {padding:12px 20px;margin:10px;border:none;border-radius:8px;cursor:pointer;}
+.whatsapp {background:#25D366;color:#fff;}
+.email {background:#222;color:#fff;}
 
-    .services {
-      max-width: 600px;
-      margin: auto;
-      text-align: left;
-    }
+section {padding:40px 20px;text-align:center;}
 
-    .video-container {
-      display: grid;
-      gap: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+.video-container {max-width:900px;margin:auto;display:grid;gap:20px;}
+iframe {width:100%;height:220px;border:none;border-radius:10px;}
 
-    iframe {
-      width: 100%;
-      height: 220px;
-      border-radius: 10px;
-      border: none;
-    }
+.float {position:fixed;bottom:20px;right:20px;width:65px;height:65px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;text-decoration:none;}
 
-    footer {
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
-    }
-
-    .float {
-      position: fixed;
-      width: 65px;
-      height: 65px;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 30px;
-      color: white;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
-    }
-
-    @keyframes fadeIn {
-      from {opacity:0; transform: translateY(-20px);} 
-      to {opacity:1; transform: translateY(0);} 
-    }
-
-    @keyframes float {
-      0%,100% {transform: translateY(0);} 
-      50% {transform: translateY(-10px);} 
-    }
-  </style>
+footer {text-align:center;padding:20px;color:#777;}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <img src="60375339-62E2-4845-A9EE-299D5E7E3686.png" class="logo">
-    <h1>ZENTRIX</h1>
-    <p>Sistemas contra incendios, electricidad y mantenimiento profesional</p>
+<div class="navbar">
+<div>ZENTRIX</div>
+<div class="menu" onclick="openMenu()">☰</div>
+</div>
 
-    <a href="https://wa.me/18094418094?text=Hola%20quiero%20una%20cotizaci%C3%B3n">
-      <button class="btn whatsapp">WhatsApp</button>
-    </a>
+<div id="menu" class="sidemenu">
+<a href="#">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#videos">Videos</a>
+<a href="#contacto">Contacto</a>
+</div>
 
-    <a href="mailto:Mischael110@gmail.com">
-      <button class="btn email">Correo</button>
-    </a>
-  </header>
+<header>
+<img src="60375339-62E2-4845-A9EE-299D5E7E3686.png" class="logo">
+<h1>ZENTRIX</h1>
+<p>Sistemas contra incendios y electricidad profesional</p>
 
-  <section>
-    <h2>Servicios</h2>
-    <div class="services">
-      <p>• Sistemas de alarmas contra incendios, sirenas y detección</p>
-      <p>• Instalaciones en tubería EMT</p>
-      <p>• Diseño eléctrico y sistemas de potencia</p>
-      <p>• Mantenimiento eléctrico</p>
-    </div>
-  </section>
+<a href="https://wa.me/18094418094?text=Hola%20quiero%20cotizar">
+<button class="btn whatsapp">WhatsApp</button>
+</a>
 
-  <section>
-    <h2>Trabajos Reales</h2>
-    <p>Mira ejemplos de instalaciones profesionales</p>
+<a href="mailto:Mischael110@gmail.com">
+<button class="btn email">Correo</button>
+</a>
+</header>
 
-    <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/5bQ6d3nqk6A"></iframe>
-      <iframe src="https://www.youtube.com/embed/8QwYpF7kq9M"></iframe>
-    </div>
-  </section>
+<section id="servicios">
+<h2>Servicios</h2>
+<p>Alarmas contra incendios</p>
+<p>Instalaciones en tubería EMT</p>
+<p>Diseño eléctrico</p>
+<p>Mantenimiento</p>
+</section>
 
-  <section>
-    <h2>Atención Inteligente</h2>
-    <p>Contáctanos directamente o recibe respuestas rápidas con nuestro asistente.</p>
-  </section>
+<section id="videos">
+<h2>Trabajos Reales</h2>
+<div class="video-container">
+<iframe src="https://www.youtube.com/embed/2r9XG8k5F3k"></iframe>
+<iframe src="https://www.youtube.com/embed/1B3hP9z8KxE"></iframe>
+<iframe src="https://www.youtube.com/embed/9p3V6wF8Z2Q"></iframe>
+</div>
+</section>
 
-  <footer>
-    © 2026 Zentrix - Todos los derechos reservados
-  </footer>
+<section id="contacto">
+<h2>Contáctanos</h2>
+<p>WhatsApp: +1 809-441-8094</p>
+<p>Email: Mischael110@gmail.com</p>
+</section>
 
-  <a href="https://wa.me/18094418094?text=Hola%20necesito%20informaci%C3%B3n" class="float">💬</a>
+<footer>
+© 2026 Zentrix
+</footer>
 
-  <!-- CHAT IA REAL (Tawk.to listo) -->
-  <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/64f000000000000000000000/1h0000000';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-  </script>
+<a href="https://wa.me/18094418094" class="float">💬</a>
+
+<script>
+function openMenu(){
+let menu = document.getElementById('menu');
+menu.style.right = menu.style.right === '0px' ? '-250px' : '0px';
+}
+</script>
 
 </body>
 </html>
